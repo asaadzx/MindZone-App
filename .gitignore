@@ -1,4 +1,4 @@
-/mindzone/firebase.json
-/mindzone/lib/firebase_options.dart
-/mindzone/android/app/google-services.json
-/mindzone/android/app/google-services.json
+
+mindzone/lib/firebase_options.dart
+mindzone/firebase.json
+mindzone/android/app/google-services.json
