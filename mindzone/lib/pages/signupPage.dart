@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'homePage.dart'; // Assuming HomePage is the destination after signup
 import 'loginPage.dart'; // Link to the login page
 import 'package:mindzone/data/database_helper.dart';
@@ -119,7 +120,7 @@ class _SignupPageState extends State<SignupPage> {
                       ? 'Please enter your name'
                       : null,
                 ),
-                const SizedBox(height: 12), // Added spacing
+                const SizedBox(height: 12), 
                 TextFormField(
                   controller: _emailController,
                   decoration: const InputDecoration(labelText: 'Email'),
@@ -128,12 +129,12 @@ class _SignupPageState extends State<SignupPage> {
                       ? 'Please enter a valid email'
                       : null,
                 ),
-                 const SizedBox(height: 12), // Added spacing
+                 const SizedBox(height: 12), 
                 TextFormField(
                   controller: _passwordController,
                   decoration: const InputDecoration(labelText: 'Password'),
                   obscureText: true,
-                  validator: (value) => (value == null || value.isEmpty || value.length < 6) // Added minimum length validation
+                  validator: (value) => (value == null || value.isEmpty || value.length < 6) 
                       ? 'Please enter a password with at least 6 characters'
                       : null,
                 ),
@@ -146,13 +147,13 @@ class _SignupPageState extends State<SignupPage> {
                             TextStyle(color: Theme.of(context).colorScheme.error)),
                   ),
                 if (_isLoading)
-                  const Center(child: CircularProgressIndicator()) // Center the indicator
+                  const Center(child: CircularProgressIndicator()) 
                 else
                   ElevatedButton(
                     onPressed: _signUp,
                     child: const Text('Sign Up'),
                   ),
-                const SizedBox(height: 10), // Spacing before the login link
+                const SizedBox(height: 10), 
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pushReplacement( // Use pushReplacement to prevent going back to signup
