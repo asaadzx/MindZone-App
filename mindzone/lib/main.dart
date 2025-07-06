@@ -18,7 +18,7 @@ void main() async {
 }
 
 class MindZoneApp extends StatelessWidget { 
-  const MindZoneApp({Key? key}) : super(key: key);
+  const MindZoneApp({super.key});
 
   @override
   Widget build(BuildContext context) {
