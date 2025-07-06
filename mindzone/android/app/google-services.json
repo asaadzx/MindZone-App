@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457332067935",
+    "project_id": "mindzone-mental-health",
+    "storage_bucket": "mindzone-mental-health.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457332067935:android:e6c42e5de7591a29c555ea",
+        "android_client_info": {
+          "package_name": "com.example.mindzone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe9hcoHv50QD99ERPeu_HvSsSBWf25Ng4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
