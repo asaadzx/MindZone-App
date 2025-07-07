@@ -41,7 +41,6 @@ class _SettingsPageState extends State<SettingsPage> {
         );
       }
     } catch (e) {
-      print('Error signing out: $e');
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
