@@ -20,34 +20,12 @@ MindZone is a Flutter-based mobile application designed to support mental health
     - **Firebase Analytics:** Track user engagement.
     - **Firebase Messaging:** Push notifications for updates.
 
-## Getting Started
-
-1. **Clone the repository:**
-     ```bash
-     git clone https://github.com/yourusername/MindZone-App.git
-     cd MindZone-App
-     ```
-
-2. **Install dependencies:**
-     ```bash
-     flutter pub get
-     ```
-
-3. **Set up Firebase:**
-     - Create a Firebase project.
-     - Add Android/iOS apps in Firebase console.
-     - Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS).
-     - Place them in the appropriate directories.
-
-4. **Run the app:**
-     ```bash
-     flutter run
-     ```
-
 ## Contributing
 
 Contributions are welcome! Please open issues or submit pull requests for improvements.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed for review and issue reporting only. You may read and review the code, and submit issues or suggestions, but you may not modify, distribute, or use the code in other projects without explicit permission from the ME @asaadzx.
+
+## MADE WITH ❤️ BY ASAADZX 
