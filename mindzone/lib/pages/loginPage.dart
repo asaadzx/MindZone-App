@@ -49,6 +49,18 @@ class _LoginPageState extends State<LoginPage> {
       // Get the current authenticated user
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
+        // Check if email is verified
+        if (!user.emailVerified) {
+          await FirebaseAuth.instance.signOut(); // Sign out the user
+          if (mounted) {
+            setState(() {
+              _errorMessage = 'Please verify your email address before logging in.';
+              _isLoading = false;
+            });
+          }
+          return; // Stop further execution
+        }
+
         // Create a User object and save to SQLite
         final newUser = dbUser.User(
           name: user.displayName ?? user.email ?? 'User', // Use display name, email, or default

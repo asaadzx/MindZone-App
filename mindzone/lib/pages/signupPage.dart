@@ -52,6 +52,9 @@ class _SignupPageState extends State<SignupPage> {
       // Update user profile with name
       await userCredential.user?.updateDisplayName(_nameController.text.trim());
 
+      // Send email verification
+      await userCredential.user?.sendEmailVerification();
+
       // Get the current authenticated user
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
@@ -63,11 +66,22 @@ class _SignupPageState extends State<SignupPage> {
         await DatabaseHelper().insertUser(newUser);
       }
 
+      // Show a message to the user
       if (mounted) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomePage()), // Navigate to HomePage after successful signup
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Verification email sent. Please check your inbox.'),
+          ),
         );
       }
+
+      // Navigate to the Login Page
+      if (mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
+      }
+
     } on FirebaseAuthException catch (e) {
       String message;
       switch (e.code) {
